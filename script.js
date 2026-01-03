@@ -1,7 +1,11 @@
 // your code here
 const btn = document.querySelector("#button")
+const name = document.querySelector("#name")
+const year = document.querySelector("#year")
 const h3 = document.querySelector("#url")
 btn.addEventListener("click",(e) => {
 e.preventDefault()
-	h3.innerText = "https://d3dyfaf3iutrxo.cloudfront.net/thumbnail/assignment/question/8bb3b47db47841178b670717ea3c74f9.png"
+	let n = name.value
+	let y = year.value
+	h3.innerText = `https://localhost:8080/?name=${n}&year=${y}`
 })
